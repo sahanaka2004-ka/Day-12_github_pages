@@ -1,205 +1,53 @@
-/* Smooth Scrolling */
-html{
-scroll-behavior:smooth;
-}
+.blog-card{
 
-body{
+    background:white;
 
-font-family:Arial,sans-serif;
+    padding:20px;
 
-margin:0;
+    margin:20px 0;
 
-background:#f4f4f4;
+    border-radius:10px;
 
-}
-
-/* Header */
-
-header{
-
-background:#0077cc;
-
-color:white;
-
-padding:20px;
-
-text-align:center;
-
-animation:fadeIn 2s;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
 
 }
 
-/* Form */
 
-.form-section{
+.blog-card h3{
 
-width:500px;
-
-margin:30px auto;
+    margin-bottom:10px;
 
 }
 
-form{
 
-display:flex;
+.blog-card p{
 
-flex-direction:column;
-
-}
-
-input,textarea{
-
-padding:12px;
-
-margin:10px 0;
-
-font-size:16px;
-
-border:1px solid #ccc;
-
-border-radius:5px;
-
-transition:0.3s;
+    font-size:16px;
 
 }
 
-input:focus,
-textarea:focus{
 
-border-color:#0077cc;
+.blog-card button{
 
-box-shadow:0px 0px 8px #0077cc;
+    background:red;
 
-outline:none;
+    color:white;
 
-}
+    border:none;
 
-/* Button */
+    padding:8px 15px;
 
-button{
+    border-radius:5px;
 
-padding:12px;
-
-background:#0077cc;
-
-color:white;
-
-border:none;
-
-border-radius:5px;
-
-cursor:pointer;
-
-transition:0.3s;
+    cursor:pointer;
 
 }
 
-button:hover{
 
-background:#005fa3;
+h2{
 
-transform:scale(1.05);
+    text-align:center;
 
-}
-
-/* Blog Cards */
-
-#blogs{
-
-text-align:center;
-
-}
-
-.card{
-
-width:500px;
-
-margin:20px auto;
-
-padding:20px;
-
-background:white;
-
-border-radius:10px;
-
-box-shadow:0px 0px 10px gray;
-
-transition:0.3s;
-
-animation:slideUp 0.7s;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0px 10px 20px gray;
-
-}
-
-@keyframes fadeIn{
-
-from{
-
-opacity:0;
-
-}
-
-to{
-
-opacity:1;
-
-}
-
-}
-
-@keyframes slideUp{
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-/* Mobile Responsive Design */
-
-@media screen and (max-width: 768px) {
-
-    body {
-        padding: 10px;
-    }
-
-    .container {
-        width: 90%;
-        margin: 20px auto;
-        padding: 20px;
-    }
-
-    input,
-    textarea {
-        width: 100%;
-        font-size: 16px;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
+    margin-top:30px;
 
 }
