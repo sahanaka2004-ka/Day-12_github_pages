@@ -21,6 +21,10 @@ function addBlog() {
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
     let content = document.getElementById("content").value;
+    if(title==="" || author==="" || content===""){
+    alert("Please fill all fields");
+    return;
+}
 
     let blog = {
         title: title,
