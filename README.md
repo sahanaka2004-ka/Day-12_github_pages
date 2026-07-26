@@ -33,4 +33,4 @@ https://sahanaka2004-ka.github.io/Day-12_github_pages/
 
 ## Repository
 
-(Add your GitHub repository link here)
+https://github.com/sahanaka2004-ka/Day-12_github_pages
