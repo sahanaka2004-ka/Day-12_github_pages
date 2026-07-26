@@ -3,61 +3,51 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Management System</title>
 
-<title>Animated Blog App</title>
-
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
-<header>
+<div class="container">
 
-<h1>Blog Management System</h1>
-  <h2>Day 12 Deployment Updated</h2>
+    <h1>Blog Management System</h1>
 
-</header>
 
-<section class="form-section">
+    <div class="form-section">
 
-<form id="blogForm">
+        <input type="text" id="title" placeholder="Enter Blog Title">
 
-<input
-type="text"
-id="title"
-placeholder="Enter Blog Title"
-required>
+        <input type="text" id="author" placeholder="Enter Author Name">
 
-<input
-type="text"
-id="author"
-placeholder="Enter Author Name"
-required>
+        <textarea id="content" placeholder="Enter Blog Content"></textarea>
 
-<textarea
-id="content"
-placeholder="Enter Blog Content"
-required></textarea>
 
-<button onclick="addBlog()">Add Blog</button>
-  <h2>All Blog Posts</h2>
-  <div id="blogPosts"></div>
+        <button onclick="addBlog()">Add Blog</button>
 
-</form>
+        <button onclick="deleteAllBlogs()">Delete All Blogs</button>
 
-</section>
 
-<section id="blogs">
+    </div>
 
-<h2 class="blog-heading">All Blog Posts</h2>
 
-<div id="blogs"></div>
 
-</section>
+    <h2>All Blog Posts</h2>
+
+
+    <div id="blogPosts">
+
+    </div>
+
+
+</div>
+
 
 <script src="script.js"></script>
 
