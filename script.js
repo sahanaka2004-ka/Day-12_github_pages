@@ -4,7 +4,7 @@ function displayBlogs() {
     const blogContainer = document.getElementById("blogPosts");
 
     blogContainer.innerHTML = "";
-
+    
     blogs.forEach(blog => {
         blogContainer.innerHTML += `
             <div class="blog">
