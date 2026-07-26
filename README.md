@@ -1,21 +1,20 @@
-# Day-12 GitHub Pages
+# Blog Management System
 
-## Project Description
-This project demonstrates hosting a website using Git and GitHub Pages.
+## Day 13 Improvements
+
+### Changes Done:
+- Added responsive design
+- Fixed bugs
+- Improved UI
+- Cleaned unused code
 
 ## Technologies Used
+
 - HTML
 - CSS
 - JavaScript
-- Git
 - GitHub Pages
-
-## Features
-- Simple webpage design
-- CSS styling
-- JavaScript button interaction
 
 ## Live Website
 
 https://sahanaka2004-ka.github.io/Day-12_github_pages/
-
