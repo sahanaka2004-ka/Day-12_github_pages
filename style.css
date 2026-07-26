@@ -173,3 +173,33 @@ transform:translateY(0);
 }
 
 }
+/* Mobile Responsive Design */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+}
