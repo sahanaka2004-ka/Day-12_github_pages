@@ -1,97 +1,42 @@
-const form = document.getElementById("blogForm");
-const container = document.getElementById("blogContainer");
+let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
 
-// Load Blogs
-function loadBlogs(){
+function displayBlogs() {
+    const blogContainer = document.getElementById("blogPosts");
 
-fetch("/api/blogs")
+    blogContainer.innerHTML = "";
 
-.then(response=>response.json())
-
-.then(data=>{
-
-container.innerHTML="";
-
-if(data.length===0){
-
-container.innerHTML="<h3>No Blogs Available</h3>";
-
-return;
-
+    blogs.forEach(blog => {
+        blogContainer.innerHTML += `
+            <div class="blog">
+                <h3>${blog.title}</h3>
+                <p><b>Author:</b> ${blog.author}</p>
+                <p>${blog.content}</p>
+            </div>
+        `;
+    });
 }
 
-data.forEach(blog=>{
+function addBlog() {
 
-container.innerHTML+=`
+    let title = document.getElementById("title").value;
+    let author = document.getElementById("author").value;
+    let content = document.getElementById("content").value;
 
-<div class="card">
+    let blog = {
+        title: title,
+        author: author,
+        content: content
+    };
 
-<h2>${blog.title}</h2>
+    blogs.push(blog);
 
-<h4>Author: ${blog.author}</h4>
+    localStorage.setItem("blogs", JSON.stringify(blogs));
 
-<p>${blog.content}</p>
+    displayBlogs();
 
-</div>
-
-`;
-
-});
-
-});
-
+    document.getElementById("title").value = "";
+    document.getElementById("author").value = "";
+    document.getElementById("content").value = "";
 }
 
-// Add Blog
-form.addEventListener("submit",(e)=>{
-
-e.preventDefault();
-
-const title=document.getElementById("title").value;
-
-const author=document.getElementById("author").value;
-
-const content=document.getElementById("content").value;
-
-fetch("/api/blogs",{
-
-method:"POST",
-
-headers:{
-
-"Content-Type":"application/json"
-
-},
-
-body:JSON.stringify({
-
-title,
-
-author,
-
-content
-
-})
-
-})
-
-.then(response=>response.json())
-
-.then(data=>{
-
-alert("Blog Added Successfully!");
-
-form.reset();
-
-loadBlogs();
-
-// Smooth scroll to blogs section
-document.getElementById("blogs").scrollIntoView({
-behavior:"smooth"
-});
-
-});
-
-});
-
-loadBlogs();
+displayBlogs();
